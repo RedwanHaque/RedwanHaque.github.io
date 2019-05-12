@@ -14,10 +14,10 @@
     header{
       background: url(img/header.jpg); 
       background-size: cover; 
-      background-position: right; 
-      min-height: 2000; 
+      background-position: top; 
+      min-height: 1500; 
     }
-    @media screen and (mac-width: 670px){
+    @media screen and (max-width: 670px){
       header{
         min-height: 500px; 
       }
@@ -28,7 +28,26 @@
 
   <!-- navbar -->
   <header>
-
+    <nav class="class-wrapper transparent">
+      <div class="container">
+        <a href="" class="brand-logo">Redwan Haque</a>
+        <a href="" class="sidenav-trigger" data-target="mobile-menu">
+          <i class="material-icons">menu</i>
+        </a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#">Whomst</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Resume</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <ul class="sidenav grey lighten-2" id="mobile-menu">
+            <li><a href="#">Whomst</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Resume</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
   </header>
   <!-- photo / grid -->
 
@@ -47,6 +66,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
   <script>
     $(document).ready(function(){
+      $('.sidenav').sidenav(); 
     });
   </script>
 </body>
